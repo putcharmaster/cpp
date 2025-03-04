@@ -6,7 +6,7 @@
 /*   By: sanhwang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 23:38:45 by sanhwang          #+#    #+#             */
-/*   Updated: 2025/03/04 20:17:59 by sanhwang         ###   ########.fr       */
+/*   Updated: 2025/03/04 20:38:05 by sanhwang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ int Fixed::getRawBits() const {
     return fixedPointValue;
 }
 
+int Fixed::getFractionalBits(){
+    return fractionalBits;
+}
+
 void Fixed::setRawBits(int const raw){
     fixedPointValue = raw;
 }
@@ -44,7 +48,7 @@ bool Fixed::operator>(const Fixed &other) const{
 }
 
 bool Fixed::operator<(const Fixed &other) const{
-    return fixedPointValue < other.fixedPointValue
+    return fixedPointValue < other.fixedPointValue;
 }
 
 bool Fixed::operator>=(const Fixed &other) const{
@@ -132,6 +136,6 @@ const Fixed& Fixed::max(const Fixed &a, const Fixed &b){
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed){
-    os << static_cast<float>(fixed.getRawBits()) / (1 << Fixed::fractionalBits);
+    os << static_cast<float>(fixed.getRawBits()) / (1 << Fixed::getFractionalBits());
     return os;
 }

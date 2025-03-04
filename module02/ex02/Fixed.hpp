@@ -6,7 +6,7 @@
 /*   By: sanhwang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 23:38:48 by sanhwang          #+#    #+#             */
-/*   Updated: 2025/03/04 12:33:59 by sanhwang         ###   ########.fr       */
+/*   Updated: 2025/03/04 20:34:25 by sanhwang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Fixed{
         ~Fixed();
 
         int getRawBits() const;
+        static int getFractionalBits();
         void setRawBits(int const raw);
 
         bool operator>(const Fixed &other) const;
@@ -43,7 +44,7 @@ class Fixed{
         Fixed operator+(const Fixed &other) const;
         Fixed operator-(const Fixed &other) const;
         Fixed operator*(const Fixed &other) const;
-        Fixed operator/(const Fixed *other) const;
+        Fixed operator/(const Fixed &other) const;
 
         Fixed& operator++();
         Fixed operator++(int);
