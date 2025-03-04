@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanhwang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 03:33:58 by sanhwang          #+#    #+#             */
-/*   Updated: 2025/03/02 03:34:02 by sanhwang         ###   ########.fr       */
+/*   Created: 2025/03/01 18:06:41 by sanhwang          #+#    #+#             */
+/*   Updated: 2025/03/01 18:09:02 by sanhwang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef REPLACE_HPP
+#define REPLACE_HPP
 
 #include <iostream>
+#include <string>
+#include <fstream>
 
-class Harl{
+class Replace{
     private:
-        void debug();
-        void info();
-        void warning();
-        void error();
-    
+        std::string filename;
+        std::string s1;
+        std::string s2;
+
     public:
-        void complain(std::string level);
+        Replace(std::string filename, std::string s1, std::string s2);
+        bool    processFile();
 };
 
 #endif

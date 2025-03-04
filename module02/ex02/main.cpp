@@ -1,29 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanhwang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 03:33:58 by sanhwang          #+#    #+#             */
-/*   Updated: 2025/03/02 03:34:02 by sanhwang         ###   ########.fr       */
+/*   Created: 2025/03/03 23:38:50 by sanhwang          #+#    #+#             */
+/*   Updated: 2025/03/03 23:38:51 by sanhwang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
-
-#include <iostream>
-
-class Harl{
-    private:
-        void debug();
-        void info();
-        void warning();
-        void error();
-    
-    public:
-        void complain(std::string level);
-};
-
-#endif

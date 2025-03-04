@@ -6,7 +6,15 @@
 /*   By: sanhwang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 11:09:23 by sanhwang          #+#    #+#             */
-/*   Updated: 2025/02/05 11:09:23 by sanhwang         ###   ########.fr       */
+/*   Updated: 2025/03/02 03:13:45 by sanhwang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Harl.hpp"
+
+int main(){
+    Harl harl;
+
+    harl.complain("DEBUG");
+    return 0;
+}
